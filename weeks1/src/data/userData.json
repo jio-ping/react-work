@@ -1,0 +1,21 @@
+[
+  {
+    "id": 0,
+    "user_photo": "/src/assets/jjooni.jpeg",
+    "user_nickname": "쭈니",
+    "user_year": 8,
+    "user_badge": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "user_jobs": "Front-end Developer",
+    "user_gender": "여성",
+    "user_organization": "와플대학",
+    "user_temperature": 45,
+    "tradeEvaluation": [
+      "싸게 잘 샀습니다! 최고예요."
+    ]
+  }
+]
