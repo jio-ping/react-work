@@ -8,4 +8,5 @@
 <br>
 해당 페이지 중 유저 메인 페이지를 작업했습니다.😀
 
-[ 🚀 과제 수행 과정 Notion](https://localhost1029.notion.site/REACT-Work-3c9d52a645304bf7b30b2d0ba2d7ab6a?pvs=4)
+[ 🚀 과제 수행 과정 Notion](https://localhost1029.notion.site/REACT-Log-8330d59799de4fa0b6eeae29163109e7?pvs=4)
+해당 노션 페이지의 react work 부분을 봐주세요 🥰
