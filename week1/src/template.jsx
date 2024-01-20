@@ -1,12 +1,11 @@
-/* -------------------------------------------------------------------------- */
-/*                                    유저페이지                                  */
-/* -------------------------------------------------------------------------- */
 //프로필메뉴
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom/client";
 
 //필요한 아이콘 불러오기
 import icons from "/src/assets/icons/icons.jsx";
-export const profileMenuTeamplate = (data) => {
+
+export const profileMenuTemplate = (data) => {
   let { user_nickname, user_year, user_photo } = data;
   return (
     <figure>
@@ -82,13 +81,50 @@ export function profileInfos() {
 }
 
 // 프로필 컨텐츠 템플릿
-export function profileContentsTemplate(data) {
-  let { user_badge } = data;
+export function profileContentsTemplate(userData, badgeData) {
+  let { user_badge } = userData;
+  console.log(badgeData);
+
+  /**
+   * 뱃지 더보기 이벤트핸들러함수
+   */
+  let show = false;
+  function handleShowMoreBadge(e) {
+    const userProfileBadgeButton = document.querySelector(
+      ".user--profile-badge-button"
+    );
+    const userProfileBadgeList = document.querySelector(".user--profile-badge");
+    if (!Array.from(userProfileBadgeButton.classList).includes("is-active")) {
+      userProfileBadgeButton.classList.add("is-active");
+      userProfileBadgeList.classList.add("is-active");
+      // setMode(true);
+      show = true;
+    } else {
+      userProfileBadgeButton.classList.remove("is-active");
+      userProfileBadgeList.classList.remove("is-active");
+      // setMode(false);
+      show = false;
+    }
+  }
+  const badgeList = (
+    <ul className="user--profile-badge-detail is-active">
+      {user_badge.map((item) => (
+        <figure>
+          <img src={badgeData[item].badge_photo} />
+          <figcaption>
+            <p>{badgeData[item].badge_title}</p>
+          </figcaption>
+        </figure>
+      ))}
+    </ul>
+  );
+
   return (
     <ul className="user--profile-contents">
       <li className="user--profile-content user--profile-badge">
         <span>활동배지 {user_badge.length}개</span>
         <button
+          onClick={handleShowMoreBadge}
           tabIndex="0"
           type="button"
           className="user--profile-more-button user--profile-badge-button"
@@ -97,6 +133,7 @@ export function profileContentsTemplate(data) {
           {icons.rightDirection}
         </button>
       </li>
+      {show ? badgeList : null}
       <li>
         <span>판매상품 0개</span>
         <button type="button">

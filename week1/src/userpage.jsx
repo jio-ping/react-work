@@ -3,33 +3,35 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 //유저정보 가저오기
-import data from "/src/data/userData.json";
+import userData from "/src/data/userData.json";
+import badgeData from "/src/data/badgeData.json";
 
 //템플릿 불러오기
 import {
   profileInfos,
-  profileMenuTeamplate,
+  profileMenuTemplate,
   profileMenuUpperTemplate,
   profileContentsTemplate,
   userTemperatureTemplate,
   profileSubContentsTemplate,
 } from "/src/template.jsx";
 
-const profileTemplate = (data) => {
+// 프로필 템플릿
+const profileTemplate = (userData) => {
   return (
     <div className="app">
       <div className="user--profile-menu">
-        {profileMenuTeamplate(data)}
+        {profileMenuTemplate(userData)}
         {profileMenuUpperTemplate()}
         {profileInfos()}
       </div>
-      {userTemperatureTemplate(data.user_temperature)}
-      {profileContentsTemplate(data)}
-      {profileSubContentsTemplate(data.user_nickname)}
+      {userTemperatureTemplate(userData.user_temperature)}
+      {profileContentsTemplate(userData, badgeData)}
+      {profileSubContentsTemplate(userData.user_nickname)}
     </div>
   );
 };
 
 ReactDOM.createRoot(document.querySelector("body")).render(
-  profileTemplate(data[0])
+  profileTemplate(userData[0])
 );
