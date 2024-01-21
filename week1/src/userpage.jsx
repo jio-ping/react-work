@@ -11,10 +11,11 @@ import {
   profileInfos,
   profileMenuTemplate,
   profileMenuUpperTemplate,
-  profileContentsTemplate,
+  // profileContentsTemplate,
   userTemperatureTemplate,
   profileSubContentsTemplate,
 } from "/src/template.jsx";
+import { ProfileContents } from "/src/ProfileContents.jsx";
 
 // 프로필 템플릿
 const profileTemplate = (userData) => {
@@ -26,7 +27,7 @@ const profileTemplate = (userData) => {
         {profileInfos()}
       </div>
       {userTemperatureTemplate(userData.user_temperature)}
-      {profileContentsTemplate(userData, badgeData)}
+      <ProfileContents />
       {profileSubContentsTemplate(userData.user_nickname)}
     </div>
   );

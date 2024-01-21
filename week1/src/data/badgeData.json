@@ -1,22 +1,22 @@
 [
   {
-    "badge_photo": "/src/assets/jjooni.jpeg",
+    "badge_photo": "/public/jjooni.jpeg",
     "badge_title": "최고의 선배",
     "badge_description": "지식 공유를 3회 이상 해주셨어요"
   },
   {
-    "badge_photo": "/src/assets/jjooni.jpeg",
+    "badge_photo": "/public/jjooni.jpeg",
     "badge_title": "이듬 첫 발걸음 ! ",
     "badge_description": "엔터 이듬에서 처음 활동해주셨어요 "
   },
   {
-    "badge_photo": "/src/assets/jjooni.jpeg",
+    "badge_photo": "/public/jjooni.jpeg",
     "badge_title": "이듬 판매왕 ",
     "badge_description": "5회이상 기기거래에 성공하셨어요 ! "
   },
   {
-    "badge_photo": "/src/assets/jjooni.jpeg",
-    "badge_title": "",
+    "badge_photo": "/public/jjooni.jpeg",
+    "badge_title": "아무튼 최고예요~ ",
     "badge_description": "지식 공유를 3회 이상 해주셨어요"
   }
 ]
