@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import BadgeList from "/src/BadgeList.jsx";
 import icons from "/src/assets/icons/icons.jsx";
-
 import userData from "/src/data/userData.json";
+
 export function ProfileContents() {
   let { user_badge } = userData[0];
   const [mode, setMode] = useState(false);
