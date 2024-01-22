@@ -27,12 +27,13 @@ const profileTemplate = (userData) => {
         {profileInfos()}
       </div>
       {userTemperatureTemplate(userData.user_temperature)}
-      <ProfileContents />
+      <ProfileContents userData={userData} />
+
       {profileSubContentsTemplate(userData.user_nickname)}
     </div>
   );
 };
 
-ReactDOM.createRoot(document.querySelector("body")).render(
+ReactDOM.createRoot(document.querySelector("#root")).render(
   profileTemplate(userData[0])
 );

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import BadgeList from "/src/BadgeList.jsx";
 import icons from "/src/assets/icons/icons.jsx";
-import userData from "/src/data/userData.json";
+// import userData from "/src/data/userData.json";
 
-export function ProfileContents() {
-  let { user_badge } = userData[0];
+export function ProfileContents(props) {
+  // let { user_badge } = userData[0]
+  let { user_badge } = props.userData;
   const [mode, setMode] = useState(false);
 
   function handleShowMoreBadge(e) {

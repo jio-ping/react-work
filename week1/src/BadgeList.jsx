@@ -16,5 +16,4 @@ const BadgeList = (user_badge) => {
     </div>
   );
 };
-
-export default BadgeList;
+export default BadgeList
