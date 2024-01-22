@@ -1,0 +1,55 @@
+:root {
+  /* Color styles */
+  --white: #ffffff;
+  --gray--100: #bcc3c7;
+  --gray--500: #6d7478;
+  --gray--950: #040404;
+  --green--100: #cdf5de;
+  --green--200: #9aebbe;
+  --green--300: #68e09d;
+  --green--400: #35d67d;
+  --green--500: #03cc5c;
+  --green--600: #02a34a;
+  --green--700: #027a37;
+  --green--800: #015225;
+  --green--900: #012912;
+  --blue--100: #01a9ff;
+  --blue--200: #4284f7;
+
+  /* effect styles */
+  --shadow--100: 0px 4px 4px rgba(68, 131, 63, 0.15);
+}
+/* 날씨 위젯 */
+.widget {
+  display: flex;
+  border-radius: 6px;
+  border: 1px solid #ebebea;
+  background: linear-gradient(99deg, #fff 29.16%, #f4f4f4 93.35%);
+  box-shadow: 0px 4px 4px 0px rgba(181, 181, 181, 0.15);
+  width: 192px;
+  padding: 16px 8px 16px 16px;
+  justify-content: space-between;
+  align-items: center;
+  div[role="group"] {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    & p {
+      margin: 0;
+    }
+    & p:nth-child(1) {
+      color: var(--gray-950, #040404);
+      font-weight: 900;
+      font-size: 20px;
+      font-style: normal;
+    }
+    & p:nth-child(2) {
+      color: var(--gray-500, #6d7478);
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+    }
+  }
+}
