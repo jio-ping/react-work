@@ -27,6 +27,7 @@
   background: linear-gradient(99deg, #fff 29.16%, #f4f4f4 93.35%);
   box-shadow: 0px 4px 4px 0px rgba(181, 181, 181, 0.15);
   width: 192px;
+  height: 72px;
   padding: 16px 8px 16px 16px;
   justify-content: space-between;
   align-items: center;
@@ -50,6 +51,9 @@
       font-style: normal;
       font-weight: 500;
       line-height: 100%;
+    }
+    .scale-dust {
+      color: var(--blue-100, #01a9ff);
     }
   }
 }
