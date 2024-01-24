@@ -9,12 +9,7 @@ const ScaleText = (props) => {
   }
   if (props.data.dataType === "dust") {
     const evaluation = 0 < props.data.scale ? "좋음" : "나쁨";
-    return (
-      <p className="scale-dust">
-        {props.data.scale}
-        <span>{evaluation}</span>
-      </p>
-    );
+    return <p className="scale-dust">{props.data.scale + " " + evaluation}</p>;
   }
 };
 export default ScaleText;

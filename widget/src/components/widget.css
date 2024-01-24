@@ -44,6 +44,8 @@
       font-weight: 900;
       font-size: 20px;
       font-style: normal;
+      width: 100%;
+      display: flex;
     }
     & p:nth-child(2) {
       color: var(--gray-500, #6d7478);
@@ -52,7 +54,7 @@
       font-weight: 500;
       line-height: 100%;
     }
-    .scale-dust {
+    & p.scale-dust {
       color: var(--blue-100, #01a9ff);
     }
   }

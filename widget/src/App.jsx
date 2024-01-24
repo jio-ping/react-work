@@ -8,19 +8,19 @@ function bodyStyling() {
 }
 bodyStyling();
 
-const data1 = {
+const weatherData = {
   dataType: "weather",
   temperature: 10,
   prevTemp: 13,
   atmosphereStatus: "partly-cloudy",
 };
 
-const data3 = {
+const dustData = {
   dataType: "dust",
   scale: 13,
 };
 
-const data2 = {
+const financeData = {
   dataType: "finance",
   title: "코스피",
   scale: 872.13,
@@ -29,11 +29,13 @@ const data2 = {
 
 function App() {
   return (
-    <div className="app">
-      <Widget data={data1} />
-      <Widget data={data2} />
-      <Widget data={data3} />
-    </div>
+    <React.StrictMode>
+      <div className="app">
+        <Widget data={weatherData} />
+        <Widget data={financeData} />
+        <Widget data={dustData} />
+      </div>
+    </React.StrictMode>
   );
 }
 createRoot(document.getElementById("root")).render(App());
