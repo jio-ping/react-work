@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import BadgeList from "/src/BadgeList.jsx";
+import BadgeList from "/src/component/BadgeList.jsx";
 import icons from "/src/assets/icons/icons.jsx";
-// import userData from "/src/data/userData.json";
 
-export function ProfileContents(props) {
-  // let { user_badge } = userData[0]
-  let { user_badge } = props.userData;
+import { useState } from "react";
+
+export function ProfileContents({ userData }) {
+  let { user_badge } = userData;
+
   const [mode, setMode] = useState(false);
 
-  function handleShowMoreBadge(e) {
+  function handleShowMoreBadge() {
     const userProfileBadgeButton = document.querySelector(
       ".user--profile-badge-button"
     );
@@ -38,7 +38,7 @@ export function ProfileContents(props) {
           {icons.rightDirection}
         </button>
       </li>
-      {mode ? BadgeList(user_badge) : null}
+      {mode ? <BadgeList user_badge={user_badge} /> : null}
       <li>
         <span>판매상품 0개</span>
         <button type="button">
