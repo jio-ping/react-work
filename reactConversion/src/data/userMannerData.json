@@ -2,16 +2,21 @@
   {
     "id": "tweoijr1",
     "user_id": 1,
-    "manner_title": "진심 잘 샀어용 "
+    "manner_id": 2
   },
   {
     "id": "dfoeoijrsaD",
     "user_id": 1,
-    "manner_title": "진심 잘 샀어용 "
+    "manner_id": 0
   },
   {
     "id": "dewgioewiog",
     "user_id": 1,
-    "manner_title": "진심 잘 샀어용 "
+    "manner_id": 2
+  },
+  {
+    "id": "qepfod2",
+    "user_id": 2,
+    "manner_id": 2
   }
 ]

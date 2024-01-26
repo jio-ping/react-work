@@ -23,7 +23,6 @@ export function ProfileContents({ userData }) {
       setMode(false);
     }
   }
-
   return (
     <ul className="user--profile-contents">
       <li className="user--profile-content user--profile-badge">

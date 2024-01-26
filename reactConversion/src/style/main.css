@@ -228,27 +228,30 @@
     border: none;
   }
   /* 매너평가 */
-  .user--profile-manner-wrapper {
+  user--profile-manner-wrapper {
     display: flex;
     flex-direction: column;
     gap: 11.5px;
     padding: 14px 10px;
     border-bottom: 0.3px solid var(--Contents-contentSecondary);
+    list-style: none;
     .user--profile-manner-detail {
       display: flex;
       align-items: center;
-      & img {
+      & svg {
         width: 16px;
       }
-      & span {
-        margin-left: 5px;
-        margin-right: 16px;
-      }
+
       & p {
         padding: 8px;
         background-color: #5a85ee;
         border-radius: 0px 8px 8px 8px;
       }
+    }
+    & span.user--profile-manner-count {
+      margin-left: 5px;
+      margin-right: 16px;
+      color: red;
     }
   }
 

@@ -1,3 +1,5 @@
+import "/src/style/style.css";
+import "/src/style/main.css";
 //유저정보 가저오기
 import userData from "/src/data/userData.json";
 
@@ -6,6 +8,7 @@ import {
   ProfileTemperature,
   ProfileContents,
   ProfileSubContents,
+  MannerList,
 } from "./component/index.js";
 
 const user = ~~(Math.random() * userData.length);
@@ -17,6 +20,7 @@ function Profile() {
       <ProfileTemperature userData={userData[user]} />
       <ProfileContents userData={userData[user]} />
       <ProfileSubContents userData={userData[user]} />
+      <MannerList />
     </>
   );
 }
