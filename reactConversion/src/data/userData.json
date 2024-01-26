@@ -13,9 +13,37 @@
     "user_jobs": "Front-end Developer",
     "user_gender": "여성",
     "user_organization": "와플대학",
-    "user_temperature": 45,
-    "tradeEvaluation": [
-      "싸게 잘 샀습니다! 최고예요."
-    ]
+    "user_temperature": 45
+  },
+  {
+    "id": 2,
+    "user_photo": "/jackson.jpeg",
+    "user_nickname": "잭슨",
+    "user_year": 8,
+    "user_badge": [
+      "0",
+      "1",
+      "2"
+    ],
+    "user_jobs": "Front-end Developer",
+    "user_gender": "남성",
+    "user_organization": "호호",
+    "user_temperature": 36.5
+  },
+  {
+    "id": 3,
+    "user_photo": "/sasha.jpeg",
+    "user_nickname": "미첼",
+    "user_year": 8,
+    "user_badge": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "user_jobs": "Front-end Developer",
+    "user_gender": "남성",
+    "user_organization": "헤헤",
+    "user_temperature": 100
   }
 ]

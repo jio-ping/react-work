@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import React from "react";
-import Profile from "/src/component/Profile";
+import Profile from "/src/ProfilePage";
 function App() {
   return <Profile />;
 }
