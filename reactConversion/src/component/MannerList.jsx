@@ -2,8 +2,7 @@ import icons from "/src/assets/icons/icons.jsx";
 import mannerData from "/src/data/mannerData.json";
 import userMannerData from "/src/data/userMannerData.json";
 import style from "./MannerList.module.css";
-export function MannerList() {
-  const user_id = 1;
+export function MannerList({ user_id }) {
   //{manner_id: 받은 개수}
   const manner_count = {};
   userMannerData.forEach((item) => {
@@ -19,7 +18,7 @@ export function MannerList() {
 
   Object.entries(manner_count).map((item) => console.log(item));
   return (
-    <ul className={style.manner_wrapper}>
+    <ul id="mannerList" className={style.manner_wrapper}>
       {Object.entries(manner_count).map((item, index) => (
         <li key={index} className={style.manner_detail}>
           {icons.people}

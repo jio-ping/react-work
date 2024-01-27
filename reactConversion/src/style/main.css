@@ -199,7 +199,8 @@
 /* 프로필 컨텐츠 ( 배지, 상품, 매너평가, 거래후기) */
 .user--profile-contents {
   & li,
-  .user--profcile-content {
+  .user--profile-content {
+    border: none;
     display: flex;
     padding: 16px 18px;
     justify-content: space-between;
@@ -251,7 +252,6 @@
     & span.user--profile-manner-count {
       margin-left: 5px;
       margin-right: 16px;
-      color: red;
     }
   }
 
