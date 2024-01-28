@@ -1,5 +1,5 @@
 import style from "./ProfileContents.module.css";
-import { BadgeList, MannerList } from "/src/component/index.js";
+import { BadgeList, MannerList } from "/src/component/ProfilePage/index.js";
 
 import icons from "/src/assets/icons/icons.jsx";
 

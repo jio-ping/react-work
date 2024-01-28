@@ -3,7 +3,7 @@ import "/src/style/font.css";
 import "/src/style/reset.css";
 import { createRoot } from "react-dom/client";
 import React from "react";
-import Profile from "/src/ProfilePage";
+import Profile from "/src/component/ProfilePage/ProfilePage";
 function App() {
   return <Profile />;
 }

@@ -7,7 +7,7 @@ import {
   ProfileContents,
   ProfileSubContents,
   MannerList,
-} from "./component/index.js";
+} from "./index.js";
 
 const user = ~~(Math.random() * userData.length);
 
