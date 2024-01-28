@@ -6,7 +6,6 @@ import {
   ProfileTemperature,
   ProfileContents,
   ProfileSubContents,
-  MannerList,
 } from "./index.js";
 
 const user = ~~(Math.random() * userData.length);
@@ -18,7 +17,6 @@ function Profile() {
       <ProfileTemperature userData={userData[user]} />
       <ProfileContents userData={userData[user]} />
       <ProfileSubContents userData={userData[user]} />
-      <MannerList />
     </>
   );
 }
