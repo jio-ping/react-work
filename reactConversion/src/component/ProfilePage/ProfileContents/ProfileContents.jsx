@@ -32,6 +32,8 @@ export function ProfileContents({ userData }) {
       ".user--profile-manner-button"
     );
     const userProfileManner = document.querySelector("#mannerList");
+    console.log(userProfileMannerButton);
+    console.log(userProfileManner);
     if (!Array.from(userProfileMannerButton.classList).includes("is-active")) {
       userProfileManner.classList.add("is-active");
       userProfileMannerButton.classList.add("is-active");
@@ -67,7 +69,7 @@ export function ProfileContents({ userData }) {
           {icons.rightDirection}
         </button>
       </li>
-      <li className={style.profile_content}>
+      <li id="mannerList" className={style.profile_content}>
         <span>받은 매너평가</span>
         <button
           onClick={handleShowMoreManner}

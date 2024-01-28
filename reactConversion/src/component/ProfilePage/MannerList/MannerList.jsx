@@ -15,7 +15,7 @@ export function MannerList({ user_id }) {
     }
   });
   return (
-    <ul id="mannerList" className={style.manner_wrapper}>
+    <ul className={style.manner_wrapper}>
       {Object.entries(manner_count).map((item, index) => (
         <li key={index} className={style.manner_detail}>
           {icons.people}
