@@ -2,7 +2,7 @@
   {
     "id": "tweoijr1",
     "user_id": 1,
-    "manner_id": 2
+    "manner_id": 0
   },
   {
     "id": "dfoeoijrsaD",
@@ -12,11 +12,21 @@
   {
     "id": "dewgioewiog",
     "user_id": 1,
-    "manner_id": 2
+    "manner_id": 1
   },
   {
     "id": "qepfod2",
     "user_id": 2,
     "manner_id": 2
+  },
+  {
+    "id": "eigaoef",
+    "user_id": 0,
+    "manner_id": 2
+  },
+  {
+    "id": "weagopd",
+    "user_id": 2,
+    "manner_id": 0
   }
 ]

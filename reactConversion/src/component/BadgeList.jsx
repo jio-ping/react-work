@@ -1,6 +1,6 @@
 import badgeData from "/src/data/badgeData.json";
 
-const BadgeList = ({ user_badge }) => {
+export const BadgeList = ({ user_badge }) => {
   return (
     <div className="user--profile-badge-detail is-active">
       {user_badge.map((item) => (
@@ -14,4 +14,3 @@ const BadgeList = ({ user_badge }) => {
     </div>
   );
 };
-export default BadgeList;

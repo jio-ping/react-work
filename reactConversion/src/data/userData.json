@@ -16,7 +16,7 @@
     "user_temperature": 45
   },
   {
-    "id": 2,
+    "id": 1,
     "user_photo": "/jackson.jpeg",
     "user_nickname": "잭슨",
     "user_year": 8,
@@ -31,7 +31,7 @@
     "user_temperature": 36.5
   },
   {
-    "id": 3,
+    "id": 2,
     "user_photo": "/sasha.jpeg",
     "user_nickname": "미첼",
     "user_year": 8,

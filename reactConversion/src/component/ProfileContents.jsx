@@ -1,27 +1,29 @@
-import BadgeList from "/src/component/BadgeList.jsx";
+import style from "./UserProfile.module.css";
+import { BadgeList, MannerList } from "/src/component/index.js";
+
 import icons from "/src/assets/icons/icons.jsx";
-import { MannerList } from "./MannerList";
+
 import { useState } from "react";
 
 export function ProfileContents({ userData }) {
   let { user_badge, id } = userData;
 
-  const [mode, setMode] = useState(false);
+  const [badge, setBadge] = useState(false);
   const [manner, setManner] = useState(false);
 
   function handleShowMoreBadge() {
     const userProfileBadgeButton = document.querySelector(
       ".user--profile-badge-button"
     );
-    const userProfileBadgeList = document.querySelector(".user--profile-badge");
+    const userProfileBadge = document.querySelector("#badgeList");
     if (!Array.from(userProfileBadgeButton.classList).includes("is-active")) {
       userProfileBadgeButton.classList.add("is-active");
-      userProfileBadgeList.classList.add("is-active");
-      setMode(true);
+      userProfileBadge.classList.add("is-active");
+      setBadge(true);
     } else {
       userProfileBadgeButton.classList.remove("is-active");
-      userProfileBadgeList.classList.remove("is-active");
-      setMode(false);
+      userProfileBadge.classList.remove("is-active");
+      setBadge(false);
     }
   }
 
@@ -41,8 +43,11 @@ export function ProfileContents({ userData }) {
     }
   }
   return (
-    <ul className="user--profile-contents">
-      <li className="user--profile-content user--profile-badge">
+    <ul className={style.profile_contents}>
+      <li
+        id="badgeList"
+        className={`${style.profile_content} user--profile-badge`}
+      >
         <span>활동배지 {user_badge.length}개</span>
         <button
           onClick={handleShowMoreBadge}
@@ -54,15 +59,15 @@ export function ProfileContents({ userData }) {
           {icons.rightDirection}
         </button>
       </li>
-      {mode ? <BadgeList user_badge={user_badge} /> : null}
-      <li>
+      {badge ? <BadgeList user_badge={user_badge} /> : null}
+      <li className={style.profile_content}>
         <span>판매상품 0개</span>
         <button type="button">
           <span className="sr-only">더 보기</span>
           {icons.rightDirection}
         </button>
       </li>
-      <li className="user--profile-content user--profile-manner">
+      <li className={style.profile_content}>
         <span>받은 매너평가</span>
         <button
           onClick={handleShowMoreManner}
@@ -74,7 +79,7 @@ export function ProfileContents({ userData }) {
         </button>
       </li>
       {manner ? <MannerList user_id={id} /> : null}
-      <li>
+      <li className={style.profile_content}>
         <span>받은 거래 후기 0개</span>
         <button type="button">
           <span className="sr-only">더 보기</span>

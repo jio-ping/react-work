@@ -14,9 +14,6 @@ export function MannerList({ user_id }) {
       }
     }
   });
-  console.log(...mannerData);
-
-  Object.entries(manner_count).map((item) => console.log(item));
   return (
     <ul id="mannerList" className={style.manner_wrapper}>
       {Object.entries(manner_count).map((item, index) => (

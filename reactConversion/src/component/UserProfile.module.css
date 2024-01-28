@@ -1,0 +1,51 @@
+/* 프로필 컨텐츠 ( 배지, 상품, 매너평가, 거래후기) */
+.profile_contents {
+  .profile_content {
+    border: none;
+    display: flex;
+    padding: 16px 18px;
+    justify-content: space-between;
+    height: 35px;
+    align-items: center;
+    border-bottom: 0.3px solid var(--Contents-contentSecondary);
+    & button {
+      background-color: transparent;
+      border: none;
+      & img {
+        width: 16px;
+      }
+    }
+    & button:focus-visible {
+      outline: none;
+      border: 4px solid orange;
+      border-radius: 0.25em;
+    }
+  }
+}
+
+.user--profile-badge.is-active {
+  border: none;
+}
+.user--profile-badge-button.is-active {
+  transform: rotate(0.25turn);
+}
+.profile_badge_detail.is-active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  text-align: center;
+  padding: 14px 10px;
+  border-bottom: 0.3px solid var(--Contents-contentSecondary);
+  width: 100%;
+  height: 100%;
+  & img {
+    width: 35%;
+  }
+  & p:nth-child(1) {
+    font-size: var(--font-m);
+  }
+  & p:nth-child(2) {
+    text-align: left;
+    font-size: var(--font-s);
+  }
+}
