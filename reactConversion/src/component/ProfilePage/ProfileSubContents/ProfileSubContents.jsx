@@ -1,6 +1,7 @@
+import style from "./ProfileSubContents.module.css";
 export function ProfileSubContents({ userData }) {
   return (
-    /*html */ <ul className="user--contents">
+    /*html */ <ul className={style.user_sub_contents}>
       <li>
         <a href="">보관질문</a>
       </li>
@@ -20,7 +21,7 @@ export function ProfileSubContents({ userData }) {
         <button type="button" className="user--logout">
           <span>로그아웃</span>
         </button>
-        <span className="user--logout-nickname">{userData.user_nickname}</span>
+        <span className={style.logout_nickname}>{userData.user_nickname}</span>
       </li>
     </ul>
   );

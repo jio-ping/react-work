@@ -1,0 +1,93 @@
+.profile_menu {
+  display: flex;
+  padding: 42px 31px 18px 31px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  & figure {
+    text-align: center;
+    .profile_picture_wrapper {
+      padding: 0;
+      position: relative;
+      width: 68px;
+      height: 66px;
+      .profile_picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: lightgray 50% / cover no-repeat;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+      }
+      .profile_modify {
+        position: absolute;
+        left: 52px;
+        top: 52px;
+        padding: 2px;
+        width: 14px;
+        height: 14px;
+        border-radius: 50px;
+        box-sizing: content-box;
+        background: var(--background, #fff);
+        box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+      }
+    }
+    & figcaption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding-top: 9px;
+    }
+    & figcaption > p {
+      color: var(--Contents-contentPrimary, #000);
+      font-family: Pretendard;
+      font-size: var(--font-l);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      & span {
+        margin-left: 6px;
+        border-radius: 50px;
+        padding: 3px 4px;
+        font-size: var(--font-s);
+        font-style: normal;
+        font-weight: 400;
+        border: 0.7px solid var(--secondary, #5a85ee);
+      }
+    }
+    .answer {
+      font-size: var(--font-s);
+      font-weight: 400;
+
+      color: var(--Contents-contentSecondary);
+    }
+  }
+
+  & ul {
+    display: flex;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: flex-end;
+    gap: 62px;
+
+    & a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & span {
+        margin-top: 9px;
+        font-size: var(--font-s);
+        font-weight: 600;
+      }
+    }
+    & img {
+      width: 26px;
+      height: 26px;
+    }
+  }
+}

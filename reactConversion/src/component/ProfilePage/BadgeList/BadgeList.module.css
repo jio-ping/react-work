@@ -1,0 +1,20 @@
+.profile_badge_detail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1rem;
+  text-align: center;
+  padding: 14px 10px;
+  border-bottom: 0.3px solid var(--Contents-contentSecondary);
+  width: 100%;
+  height: 100%;
+  & img {
+    width: 35%;
+  }
+  & p:nth-child(1) {
+    font-size: var(--font-m);
+  }
+  & p:nth-child(2) {
+    text-align: left;
+    font-size: var(--font-s);
+  }
+}

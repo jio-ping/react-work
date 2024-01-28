@@ -1,5 +1,6 @@
 import "/src/style/style.css";
-import "/src/style/main.css";
+import "/src/style/font.css";
+import "/src/style/reset.css";
 import { createRoot } from "react-dom/client";
 import React from "react";
 import Profile from "/src/ProfilePage";

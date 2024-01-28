@@ -1,4 +1,4 @@
-import style from "./UserProfile.module.css";
+import style from "./ProfileContents.module.css";
 import { BadgeList, MannerList } from "/src/component/index.js";
 
 import icons from "/src/assets/icons/icons.jsx";

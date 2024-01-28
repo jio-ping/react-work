@@ -1,5 +1,3 @@
-import "/src/style/style.css";
-import "/src/style/main.css";
 //유저정보 가저오기
 import userData from "/src/data/userData.json";
 

@@ -1,0 +1,62 @@
+.profile_temperature {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+
+  & label > a {
+    font-size: 12px;
+    font-weight: 400;
+
+    & img {
+      width: 14px;
+    }
+  }
+  & progress {
+    appearance: none;
+    width: 100%;
+  }
+  & progress::-webkit-progress-bar {
+    background-color: var(--Contents-contentSecondary);
+    border-radius: 10px;
+    height: 8.26px;
+  }
+  & progress::-webkit-progress-value {
+    border-radius: 10px;
+    background-color: var(--primary);
+  }
+  .temperature_progressbar_wrapper {
+    position: relative;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & span {
+      bottom: 30px;
+      position: absolute;
+    }
+    .default_temperture {
+      display: flex;
+      left: calc(36% - 33px);
+      text-align: center;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-s);
+      font-style: normal;
+      line-height: 160%;
+      font-weight: 400;
+      & img {
+        width: 10.8px;
+        height: 6px;
+      }
+    }
+    .user_temperture {
+      right: 0;
+      color: var(--secondary);
+      font-size: var(----font-m);
+      font-style: normal;
+      line-height: 150%;
+    }
+  }
+}
