@@ -2,7 +2,10 @@ import icons from "/src/assets/icons/icons.jsx";
 import style from "./UserProfile.module.css";
 
 export const UserProfile = ({ userData }) => {
-  let { user_nickname, user_year, user_photo } = userData;
+  let { id, user_nickname, user_year, user_photo } = userData;
+  user_photo = `${
+    import.meta.env.VITE_PB_API
+  }api/files/users/${id}/${user_photo}`;
   return (
     <div className={style.profile_menu}>
       <figure>
