@@ -95,7 +95,7 @@ export function ProfileContents({ userData }) {
           {icons.rightDirection}
         </button>
       </li>
-      {/* {manner ? <MannerList user_id={id} /> : null} */}
+      {manner ? <MannerList user_id={user_id} /> : null}
       <li className={style.profile_content}>
         <span>받은 거래 후기 0개</span>
         <button type="button">
