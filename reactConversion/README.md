@@ -11,3 +11,5 @@
 [ 🚀 1주차 과제 수행 과정 Notion](https://localhost1029.notion.site/vanilla-project-React-bcd5875bdd9f47d7babc862c5343688e?pvs=4)
 
 [🚀 2주차 과제 수행 과정 Notion](https://localhost1029.notion.site/vanilla-project-React-II-55398a185e7d46c2a6e527837e40d6d5?pvs=4)
+
+[🚀 3주차 과제 수행 과정 Notion](https://localhost1029.notion.site/vanilla-project-React-III-93b3d6a2629640d989393224cff0bbd5?pvs=4)
