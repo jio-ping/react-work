@@ -1,6 +1,5 @@
 import icons from "/src/assets/icons/icons.jsx";
-import mannerData from "/src/data/mannerData.json";
-import userMannerData from "/src/data/userMannerData.json";
+
 import style from "./MannerList.module.css";
 import { useEffect, useState } from "react";
 export function MannerList({ user_id }) {
@@ -21,17 +20,7 @@ export function MannerList({ user_id }) {
       console.log(mannerInfo);
     }
   }, [user_id]);
-  console.log(mannerInfo);
-  /*
-0: 
-{collectionId: '8ycag45yncu3wug', collectionName: 'user_manner_join_view', count_manner: 5, id: '1', manner_idx: 1, …}
-length
-: 
-1
-[[Prototype]]
-: 
-Array(0)
- */
+
   return (
     <ul className={style.manner_wrapper}>
       {mannerInfo.map((item) => {
