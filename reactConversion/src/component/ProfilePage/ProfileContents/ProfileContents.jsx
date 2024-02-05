@@ -6,7 +6,7 @@ import icons from "/src/assets/icons/icons.jsx";
 import { useState, useEffect } from "react";
 
 export function ProfileContents({ userData }) {
-  let { user_badge, id: user_id } = userData;
+  let { id: user_id } = userData;
   const API_ENDPOINT = `${
     import.meta.env.VITE_PB_API
   }api/collections/user_badge/records?filter=(user_id="${user_id}")`;
