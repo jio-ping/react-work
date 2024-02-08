@@ -1,0 +1,28 @@
+.message_input {
+  height: 60px;
+  font-size: 2rem;
+  line-height: normal;
+  font-weight: 300;
+  background: rgba(239, 246, 252, 0.87);
+  width: 70%;
+  border: none;
+  margin: 0;
+  border-radius: 18px;
+  box-sizing: border-box;
+}
+.message_send {
+  height: 60px;
+  width: 60px;
+  margin: 0;
+  border-radius: 18px;
+  background: #6e00ff;
+  border: none;
+  box-sizing: border-box;
+  & img {
+    width: 100%;
+  }
+}
+.message_form {
+  display: flex;
+  gap: 20px;
+}
