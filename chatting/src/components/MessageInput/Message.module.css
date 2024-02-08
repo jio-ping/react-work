@@ -8,6 +8,7 @@
   border: none;
   margin: 0;
   border-radius: 18px;
+  padding-inline: 30px;
   box-sizing: border-box;
 }
 .message_send {
