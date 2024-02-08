@@ -3,7 +3,7 @@
   position: relative;
   margin-inline: 5px;
   padding: 3px;
-  background: red;
+
   width: 50%;
 }
 
@@ -15,11 +15,20 @@
     margin: 14px;
   }
 }
+.bubble_info {
+  display: flex;
+  gap: 6px;
+  margin: 2px;
+  color: #707070;
+  font-style: normal;
+  font-weight: 300;
+}
 .circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
 }
+
 /* 남의 말풍선 */
 .bubble.others_bubble {
   background: #e7e7e7;
@@ -30,9 +39,12 @@
 /* 내 말풍선 */
 .bubble.my_bubble {
   background: #6e00ff;
+  color: #fff;
 }
 .my_circle {
   background: #6e00ff;
-  right: 0px;
-  position: absolute;
+}
+
+.bubble_info.my_info {
+  float: right;
 }
