@@ -1,0 +1,38 @@
+.speech_bubble_wrapper {
+  margin: 10px;
+  position: relative;
+  margin-inline: 5px;
+  padding: 3px;
+  background: red;
+  width: 50%;
+}
+
+.bubble {
+  border-radius: 25px;
+  padding: 14px;
+  span {
+    font-size: 15px;
+    margin: 14px;
+  }
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+/* 남의 말풍선 */
+.bubble.others_bubble {
+  background: #e7e7e7;
+}
+.circle.other_circle {
+  background: #e7e7e7;
+}
+/* 내 말풍선 */
+.bubble.my_bubble {
+  background: #6e00ff;
+}
+.my_circle {
+  background: #6e00ff;
+  right: 0px;
+  position: absolute;
+}

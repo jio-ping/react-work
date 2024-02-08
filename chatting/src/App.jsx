@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client";
 import React from "react";
-import Exercise from "/src/hooks/useImperativeHandle";
+
+import SpeechBubble from "./components/SpeechBubble/SpeechBubble";
 
 function App() {
-  return <Exercise />;
+  return <SpeechBubble />;
 }
 
 const root = document.querySelector("#root");
