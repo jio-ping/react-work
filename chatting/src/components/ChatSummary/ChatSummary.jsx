@@ -1,6 +1,10 @@
 import { A11yHidden } from "../index";
 import style from "./ChatSummary.module.css";
 // import PropTypes from "prop-types";
+/*
+ 그룹 채팅창이면 기본 이미지 제공  | 개인 채팅창이면 상대방 프로필 사진 
+*/
+
 function ChatSummary() {
   return (
     <figure className={style.chatSummary_item}>
