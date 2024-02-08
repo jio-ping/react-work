@@ -1,47 +1,51 @@
 import style from "/src/components/SpeechBubble/SpeechBubble.module.css";
+// import { string } from "prop-types";
 /*
 메시지 데이터 중 나인지 상대방인지 구분해 렌더링 
 */
+function Bubble({ sender }) {
+  console.log(sender);
+  let sender_styling = sender !== "나" ? style.other_bubble : style.my_bubble;
+  return (
+    <div className={`${sender_styling} ${style.bubble}`}>
+      <span className="message">
+        I am doing well, Can we meet tomorrow ?I am doing well, Can we meet
+        tomorrow ?I am doing well, Can we meet tomorrow ?I am doing well, Can we
+        meet tomorrow ?I am doing well, Can we meet tomorrow ?
+      </span>
+    </div>
+  );
+}
+
+function BubbleInfo({ sender }) {
+  let sender_styling = sender === "나" ? style.my_info : style.other_info;
+  return (
+    <div className={`${sender_styling} ${style.bubble_info}`}>
+      {/*  위 메시지와 시간이 같으면 생략... */}
+      <span>Today, 8:30 pm</span>
+    </div>
+  );
+}
+
 function SpeechBubble() {
   return (
     <>
       {/* 남의 말풍선 */}
       <div className={style.speech_bubble_wrapper}>
-        <div className={`${style.others_bubble} ${style.bubble}`}>
-          <span className="message">
-            I am doing well, Can we meet tomorrow ?I am doing well, Can we meet
-            tomorrow ?I am doing well, Can we meet tomorrow ?I am doing well,
-            Can we meet tomorrow ?I am doing well, Can we meet tomorrow ?
-          </span>
-        </div>
-        <div className={style.bubble_info}>
-          <div
-            role="none"
-            className={`${style.circle} ${style.other_circle}`}
-          ></div>
-          {/*  위 메시지와 시간이 같으면 생략 */}
-          <span>Today, 8:30 pm</span>
-        </div>
+        <Bubble sender="너" />
+        <BubbleInfo sender="너" />
       </div>
       {/* 내 말풍선 */}
       <div className={style.speech_bubble_wrapper}>
-        <div className={`${style.my_bubble} ${style.bubble}`}>
-          <span className="message">
-            I am doing well, Can we meet tomorrow ?I am doing well, Can we meet
-            tomorrow ?I am doing well, Can we meet tomorrow ?I am doing well,
-            Can we meet tomorrow ?I am doing well, Can we meet tomorrow ?
-          </span>
-        </div>
-        <div className={`${style.bubble_info} ${style.my_info}`}>
-          {/*  위 메시지와 시간이 같으면 생략 */}
-          <span className={style.info}>Today, 8:30 pm</span>
-          <div
-            role="none"
-            className={`${style.circle} ${style.my_circle}`}
-          ></div>
-        </div>
+        <Bubble sender="나" />
+        <BubbleInfo sender="나" />
       </div>
     </>
   );
 }
 export default SpeechBubble;
+
+/*SpeechBubble.prototype = {
+  chatroom_id :"string",
+  sender: "string",
+};*/

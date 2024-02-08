@@ -2,49 +2,56 @@
   margin: 10px;
   position: relative;
   margin-inline: 5px;
-  padding: 3px;
-
+  padding: px;
   width: 50%;
 }
 
 .bubble {
   border-radius: 25px;
+  margin-inline: 5px;
   padding: 14px;
   span {
     font-size: 15px;
-    margin: 14px;
+    margin: 10px;
   }
 }
+
 .bubble_info {
   display: flex;
-  gap: 6px;
+  gap: 10px;
   margin: 2px;
   color: #707070;
   font-style: normal;
   font-weight: 300;
 }
-.circle {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
 
 /* 남의 말풍선 */
-.bubble.others_bubble {
+.bubble.other_bubble {
   background: #e7e7e7;
 }
-.circle.other_circle {
-  background: #e7e7e7;
-}
+
 /* 내 말풍선 */
 .bubble.my_bubble {
   background: #6e00ff;
   color: #fff;
 }
-.my_circle {
-  background: #6e00ff;
-}
 
 .bubble_info.my_info {
-  float: right;
+  right: 0;
+  position: absolute;
+}
+
+.bubble_info.other_info::before {
+  content: " ";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #e7e7e7;
+}
+.bubble_info.my_info::after {
+  content: " ";
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #6e00ff;
 }
