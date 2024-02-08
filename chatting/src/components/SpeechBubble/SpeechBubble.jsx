@@ -22,7 +22,7 @@ function BubbleInfo({ sender }) {
   return (
     <div className={`${sender_styling} ${style.bubble_info}`}>
       {/*  위 메시지와 시간이 같으면 생략... */}
-      <span>Today, 8:30 pm</span>
+      <time>Today, 8:30 pm</time>
     </div>
   );
 }
