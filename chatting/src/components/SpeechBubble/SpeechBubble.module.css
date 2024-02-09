@@ -1,8 +1,7 @@
 .speech_bubble_wrapper {
-  margin: 10px;
+  margin-block-end: 30px;
   position: relative;
-  margin-inline: 5px;
-  padding: px;
+  background-color: red;
   width: 50%;
 }
 

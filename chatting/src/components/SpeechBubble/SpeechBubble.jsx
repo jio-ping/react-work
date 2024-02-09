@@ -4,7 +4,6 @@ import style from "/src/components/SpeechBubble/SpeechBubble.module.css";
 메시지 데이터 중 나인지 상대방인지 구분해 렌더링 
 */
 function Bubble({ sender }) {
-  console.log(sender);
   let sender_styling = sender !== "나" ? style.other_bubble : style.my_bubble;
   return (
     <div className={`${sender_styling} ${style.bubble}`}>
@@ -27,13 +26,14 @@ function BubbleInfo({ sender }) {
   );
 }
 
-function SpeechBubble() {
+function SpeechBubble({ sender }) {
+  console.log(sender);
   return (
     <>
       {/* 남의 말풍선 */}
       <div className={style.speech_bubble_wrapper}>
-        <Bubble sender="너" />
-        <BubbleInfo sender="너" />
+        <Bubble sender={sender} />
+        <BubbleInfo sender={sender} />
       </div>
       {/* 내 말풍선 */}
       <div className={style.speech_bubble_wrapper}>
