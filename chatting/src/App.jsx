@@ -1,18 +1,11 @@
 import { createRoot } from "react-dom/client";
 import React from "react";
-import {
-  SpeechBubble,
-  MessageInput,
-  ChatroomList,
-  ChatSummary,
-  ChatroomInfo,
-  NavBar,
-} from "./components/index.js";
+import { Chatroom } from "./components/index.js";
 
 function App() {
   return (
     <>
-      <ChatroomInfo />
+      <Chatroom />
     </>
   );
 }
