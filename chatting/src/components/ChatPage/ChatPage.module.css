@@ -1,0 +1,8 @@
+.ChatPage {
+  display: flex;
+  gap: 42px;
+  justify-content: space-around;
+  padding: 20px;
+  height: 100%;
+  background: #eff6fc;
+}

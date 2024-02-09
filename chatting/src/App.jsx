@@ -1,11 +1,11 @@
 import { createRoot } from "react-dom/client";
 import React from "react";
-import { Chatroom } from "./components/index.js";
+import { ChatPage } from "./components/index.js";
 
 function App() {
   return (
     <>
-      <Chatroom />
+      <ChatPage />
     </>
   );
 }
