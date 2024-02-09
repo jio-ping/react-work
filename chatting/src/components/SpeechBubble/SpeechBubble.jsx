@@ -30,15 +30,9 @@ function SpeechBubble({ sender }) {
   console.log(sender);
   return (
     <>
-      {/* 남의 말풍선 */}
       <div className={style.speech_bubble_wrapper}>
         <Bubble sender={sender} />
         <BubbleInfo sender={sender} />
-      </div>
-      {/* 내 말풍선 */}
-      <div className={style.speech_bubble_wrapper}>
-        <Bubble sender="나" />
-        <BubbleInfo sender="나" />
       </div>
     </>
   );
