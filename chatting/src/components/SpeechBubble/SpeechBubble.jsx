@@ -6,13 +6,15 @@ import style from "/src/components/SpeechBubble/SpeechBubble.module.css";
 function Bubble({ sender }) {
   let sender_styling = sender !== "나" ? style.other_bubble : style.my_bubble;
   return (
-    <div className={`${sender_styling} ${style.bubble}`}>
-      <span className="message">
-        I am doing well, Can we meet tomorrow ?I am doing well, Can we meet
-        tomorrow ?I am doing well, Can we meet tomorrow ?I am doing well, Can we
-        meet tomorrow ?I am doing well, Can we meet tomorrow ?
-      </span>
-    </div>
+    <>
+      <div className={`${sender_styling} ${style.bubble}`}>
+        <span className="message">
+          I am doing well, Can we meet tomorrow ?I am doing well, Can we meet
+          tomorrow ?I am doing well, Can we meet tomorrow ?I am doing well, Can
+          we meet tomorrow ?I am doing well, Can we meet tomorrow ?
+        </span>
+      </div>
+    </>
   );
 }
 
@@ -28,9 +30,10 @@ function BubbleInfo({ sender }) {
 
 function SpeechBubble({ sender }) {
   console.log(sender);
+  let sender_wrapper = sender === "나" ? style.my_bubble : style.other_bubble;
   return (
     <>
-      <div className={style.speech_bubble_wrapper}>
+      <div className={`${style.speech_bubble_wrapper} ${sender_wrapper}`}>
         <Bubble sender={sender} />
         <BubbleInfo sender={sender} />
       </div>

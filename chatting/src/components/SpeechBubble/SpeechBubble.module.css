@@ -1,13 +1,21 @@
 .speech_bubble_wrapper {
   margin-block-end: 30px;
-  position: relative;
-  width: 50%;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.speech_bubble_wrapper.other_bubble {
+  align-items: flex-start;
+}
+.speech_bubble_wrapper.my_bubble {
+  align-items: flex-end;
 }
 
 .bubble {
   border-radius: 25px;
   margin-inline: 5px;
   padding: 14px;
+  width: 70%;
   span {
     font-size: 15px;
     margin: 10px;
@@ -26,19 +34,17 @@
 /* 남의 말풍선 */
 .bubble.other_bubble {
   background: #e7e7e7;
+  float: left;
 }
 
-/* 내 말풍선 */
 .bubble.my_bubble {
   background: #6e00ff;
   color: #fff;
+  float: right;
 }
-
 .bubble_info.my_info {
-  right: 0;
-  position: absolute;
+  justify-content: flex-end;
 }
-
 .bubble_info.other_info::before {
   content: " ";
   width: 15px;
