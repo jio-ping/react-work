@@ -5,13 +5,14 @@ import {
   MessageInput,
   ChatroomList,
   ChatSummary,
+  ChatroomInfo,
   NavBar,
 } from "./components/index.js";
 
 function App() {
   return (
     <>
-      <NavBar />
+      <ChatroomInfo />
     </>
   );
 }
