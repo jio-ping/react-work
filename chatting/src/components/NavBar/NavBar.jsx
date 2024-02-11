@@ -1,11 +1,15 @@
 import style from "./NavBar.module.css";
 // import { string } from "prop-types";
-function NavBar() {
+function NavBar({ userData }) {
+  const { id, user_nickname, user_photo } = userData;
+  const user_image = `${
+    import.meta.env.VITE_PB_API
+  }api/files/users/${id}/${user_photo}`;
   return (
     <nav className={style.navigation}>
       <img
-        src="/src/test_data/myprofile.jpg"
-        alt="어쩌구님의 프로필"
+        src={user_image}
+        alt={`${user_nickname}의 프로필`}
         className={style.user_profile_photo}
       />
       <ul>
