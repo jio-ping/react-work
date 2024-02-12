@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Chatroom, NavBar, ChatroomList } from "../index";
+import { NavBar, ChatroomList } from "../index";
 import style from "./ChatPage.module.css";
 // import { string } from "prop-types";
 const user_id = "450foql2mb3cx6s";
@@ -21,11 +21,11 @@ function ChatPage() {
     <div className={style.ChatPage}>
       <NavBar userData={data} />
       <ChatroomList userId={data.id} />
-      <Chatroom />
     </div>
   );
 }
 export default ChatPage;
+
 /*ChatPage.prototype = {
   chatroom_id :"string",
   sender: "string",

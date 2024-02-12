@@ -12,10 +12,10 @@ const pb = new PocketBase(import.meta.env.VITE_PB_API);
 const API_MESSAGE_ENDPOINT = `${
   import.meta.env.VITE_PB_API
 }api/collections/message/records`;
+
 // 선택한 채팅방
-function Chatroom() {
+function Chatroom({ chatroomIdx }) {
   // 선택한 채팅방
-  const [chatRoom, setChatroom] = useState("1");
 
   const [message, setMessage] = useState([]);
   // realtime API
@@ -27,22 +27,22 @@ function Chatroom() {
 
   // 채팅창
   useEffect(() => {
-    const 선택한_채팅방_메시지 = `${API_MESSAGE_ENDPOINT}?sort=sent_at,sender&filter=(chatroom_idx="${chatRoom}")`;
+    const 선택한_채팅방_메시지 = `${API_MESSAGE_ENDPOINT}?sort=sent_at,sender&filter=(chatroom_idx="${chatroomIdx}")`;
     fetch(선택한_채팅방_메시지)
       .then((res) => res.json())
       .then((data) => setMessage(data.items))
       .catch((Error) => console.error(Error));
-  }, []);
+  }, [chatroomIdx]);
 
   return (
     <div className={style.chatroom}>
-      <ChatroomInfo />
+      <ChatroomInfo chatroomIdx={chatroomIdx} />
       <div className={style.Bubbles}>
         {message.map((item) => (
           <SpeechBubble key={item.id} messageInfo={item} />
         ))}
       </div>
-      <MessageInput />
+      <MessageInput chatroomIdx={chatroomIdx} />
     </div>
   );
 }

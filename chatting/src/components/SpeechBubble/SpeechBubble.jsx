@@ -6,7 +6,6 @@ import style from "/src/components/SpeechBubble/SpeechBubble.module.css";
 
 const TEST_ID = "450foql2mb3cx6s";
 function Bubble({ sender, message_content }) {
-  console.log(message_content);
   let sender_styling =
     sender !== TEST_ID ? style.other_bubble : style.my_bubble;
   return (
@@ -29,7 +28,6 @@ function BubbleInfo({ sender, sent_at }) {
 }
 
 function SpeechBubble({ messageInfo }) {
-  console.log(messageInfo);
   const { sender, message_content, sent_at } = messageInfo;
   let sender_wrapper =
     sender === TEST_ID ? style.my_bubble : style.other_bubble;

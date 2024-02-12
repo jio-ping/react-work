@@ -1,25 +1,23 @@
 import style from "./Message.module.css";
 // import { string } from "prop-types";
 import { useRef } from "react";
-import { timeStamp } from "../../utils";
+import { timeStamp } from "/src/utils";
 
 import PocketBase from "pocketbase";
 const pb = new PocketBase(import.meta.env.VITE_PB_API);
 const TEST_ID = "450foql2mb3cx6s";
 
-function MessageInput({ chatRoomIdx }) {
+function MessageInput({ chatroomIdx }) {
   const message = useRef("");
 
   // 전송버튼 클릭/엔터 누르면 작동하는 이벤트 함수
   async function handleSubmit(e) {
     e.preventDefault();
     const messageContent = message.current.value;
-    console.log(messageContent);
-    console.log(Boolean(messageContent));
     if (messageContent) {
       const now = Date.now();
       const message_data = {
-        chatroom_idx: chatRoomIdx,
+        chatroom_idx: chatroomIdx,
         sender: TEST_ID,
         message_content: messageContent,
         sent_at: timeStamp(now),

@@ -2,12 +2,12 @@ import { A11yHidden } from "../index";
 import style from "./ChatroomInfo.module.css";
 // import PropTypes from "prop-types";
 
-function ChatroomInfo() {
+function ChatroomInfo({ chatroomIdx }) {
   return (
     <div className={style.chatroom_info}>
       <A11yHidden as="h2">어쩌구님과의 대화방</A11yHidden>
       <figure className={style.participants_info}>
-        <img src="/src/test_data/nqioadfh.jpeg" alt="어쩌구님 프로필" />
+        <img src="/src/test_data/야옹.PNG" alt="어쩌구님 프로필" />
         <figcaption>어쩌구</figcaption>
       </figure>
       <button type="button">
